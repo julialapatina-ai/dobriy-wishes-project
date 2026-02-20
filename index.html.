@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>1% Добра</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --green:#1db954; --bg:#fafafa; --text:#222; }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui, Arial, sans-serif;}
+    .wrap{min-height:100svh;display:grid;place-items:center;padding:24px;}
+    .card{background:#fff;max-width:520px;width:100%;padding:28px 24px;border-radius:16px;
+          box-shadow:0 12px 30px rgba(0,0,0,.08);}
+    h1{margin:0 0 12px;font-size:20px;color:#444}
+    .wish{font-size:20px}
+    .badge{display:inline-block;margin-bottom:8px;padding:4px 10px;border-radius:999px;
+           background:var(--green);color:#fff;font-size:12px;letter-spacing:.3px}
+    .muted{margin-top:14px;color:#777;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="badge">Добрый · +1% к добру</div>
+      <h1>Ваше пожелание</h1>
+      <div id="wish" class="wish"></div>
+      <div class="muted">Обновите страницу — увидите другое.</div>
+    </div>
+  </div>
+
+  <script>
+    // Список коротких «добрых» пожеланий
+    const wishes = [
+      "Заряжены на 99%. +1% — и вы, как идеальное яблочко Добрый. Похвалите коллегу за достижения. Слова заряжают сильнее витаминов.",
+      "Заряжены на 99%. Нужен еще 1% — и будите ярким, как апельсин из Доброго. Сделайте паузу и скажите комплимент коллеге. Добро передаётся быстрее, чем витамин С.",
+      "Заряжены на 99%. +1% — и вы насыщенны, как Добрый томат. Поблагодарить коллегу за помощь, даже маленькую. Добрые слова работают, как магний в томатах.",
+      "Заряжены на 99%. Остался +1% — и вы энергичны, как мультифрут Добрый. Подарите коллеге внимание — это работает лучше любого витаминного микса.",
+      "Заряжены на 99%. +1% — и вы витаминные, как Добрый морс. Сделайте доброе дело — оно поддерживает команду не хуже витаминов в ягодах."
+    ];
+
+    // Случайный выбор
+    const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+    document.getElementById("wish").textContent = randomWish;
+  </script>
+</body>
+</html>
