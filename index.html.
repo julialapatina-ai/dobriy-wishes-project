@@ -1,46 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Добрые пожелания</title>
-
-    <style>
-        body {
-            background: #fff7e6;
-            font-family: Arial, sans-serif;
-            display: flex;
-            height: 100vh;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-        }
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-            font-size: 22px;
-            line-height: 1.4;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>1% Добра</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+      background: #fafafa;
+      color: #333;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      margin: auto;
+      max-width: 420px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  </style>
 </head>
 <body>
 
-<div class="card" id="wish"></div>
+  <div class="card" id="wish"></div>
 
 <script>
-    const wishes = [
-        "Похвалите коллегу за достижения. Слова заряжают сильнее витаминов.",
-        "Сделайте паузу и скажите комплимент — добро передаётся быстрее витамина С.",
-        "Поблагодарите коллегу за помощь — даже маленькую.",
-        "Подарите внимание — это работает лучше любого витаминного микса.",
-        "Сделайте доброе дело — оно поддерживает команду не хуже витаминов."
-    ];
+  // Список пожеланий
+  const wishes = [
+    "Заряжены на 99%. +1% — и вы как яблочко Добрый. Похвалите коллегу — это заряжает.",
+    "Заряжены на 99%. +1% — и вы яркие, как апельсин Добрый. Скажите комплимент — добро быстро летит.",
+    "Заряжены на 99%. +1% — и вы насыщенны, как томат Добрый. Поблагодарите коллегу — это успокаивает.",
+    "Заряжены на 99%. +1% — и вы энергичны, как мультифрут Добрый. Подарите минуту внимания — это работает.",
+    "Заряжены на 99%. +1% — и вы живые, как Добрый морс. Сделайте добро — команда почувствует."
+  ];
 
-    const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
-    document.getElementById("wish").textContent = randomWish;
+  // Выбор случайного пожелания
+  const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+
+  // Вывод на страницу
+  document.getElementById("wish").textContent = randomWish;
 </script>
 
 </body>
